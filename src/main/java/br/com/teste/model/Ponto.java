@@ -1,4 +1,4 @@
-package br.com.teste.datasource.model;
+package br.com.teste.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -19,15 +19,11 @@ public class Ponto implements Serializable {
     private char register;
 
     public Ponto(){
-
+        this.dateRegister = new Date(System.currentTimeMillis());
     }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public User getUser() {

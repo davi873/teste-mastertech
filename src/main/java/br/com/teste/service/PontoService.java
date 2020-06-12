@@ -1,6 +1,6 @@
 package br.com.teste.service;
 
-import br.com.teste.datasource.model.Ponto;
+import br.com.teste.model.Ponto;
 import br.com.teste.repository.PontoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,9 @@ public class PontoService {
     }
 
     public List<Ponto> getPontoByUser(int idUser){
+
         return pontoRepository.findByUserId(idUser);
+
     }
 
 }

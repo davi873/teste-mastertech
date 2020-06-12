@@ -1,11 +1,12 @@
 package br.com.teste.controller;
 
-import br.com.teste.datasource.model.Ponto;
+import br.com.teste.controller.dto.PontoDTO;
+import br.com.teste.model.Ponto;
 import br.com.teste.service.PontoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import java.util.*;
 
-import java.util.List;
 
 @RestController
 public class PontoController {
@@ -25,7 +26,9 @@ public class PontoController {
     }
 
     @GetMapping("/pontoByUser/{idUser}")
-    private List<Ponto> pontoByUser(@PathVariable(value = "idUser") int idUser){
-        return pontoService.getPontoByUser(idUser);
+    private PontoDTO pontoByUser(@PathVariable(value = "idUser") int idUser){
+        List<Ponto> lsReturn = pontoService.getPontoByUser(idUser);
+        PontoDTO pontoDto = new PontoDTO(lsReturn);
+        return pontoDto;
     }
 }

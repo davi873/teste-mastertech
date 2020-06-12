@@ -1,7 +1,6 @@
 package br.com.teste.repository;
 
-import br.com.teste.datasource.model.Ponto;
-import org.springframework.data.jpa.repository.EntityGraph;
+import br.com.teste.model.Ponto;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

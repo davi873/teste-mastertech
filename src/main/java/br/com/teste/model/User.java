@@ -1,4 +1,4 @@
-package br.com.teste.datasource.model;
+package br.com.teste.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,14 +22,11 @@ public class User implements Serializable {
 
 
     public User() {
+        this.dateRegister = new Date(System.currentTimeMillis());
     }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -50,9 +47,5 @@ public class User implements Serializable {
 
     public Date getDateRegister() {
         return dateRegister;
-    }
-
-    public void setDateRegister(Date dateRegister) {
-        this.dateRegister = dateRegister;
     }
 }

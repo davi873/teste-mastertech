@@ -1,6 +1,6 @@
 package br.com.teste.controller;
 
-import br.com.teste.datasource.model.User;
+import br.com.teste.model.User;
 import br.com.teste.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

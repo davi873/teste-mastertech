@@ -1,7 +1,7 @@
 package br.com.teste.service;
 
 
-import br.com.teste.datasource.model.User;
+import br.com.teste.model.User;
 import br.com.teste.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
